@@ -1,0 +1,45 @@
+<template>
+  <require from='./markdown'></require>
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6">
+    <ul class="list" sortable="items.bind: items; placeholder.bind: { placeholderClass: 'placeholder' }; axis: y">
+      <li repeat.for="item of items"
+          sortable-item="item.bind: item;"
+          class="${item.placeholderClass}"
+          css.bind="item.style">
+        <table>
+          <colgroup width="172px"></colgroup>
+          <colgroup width="48px"></colgroup>
+          <tr>
+            <td>${item.title}</td>
+            <td><span class="glyphicon glyphicon-menu-hamburger"></span></td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+    <markdown class="markdown">
+###Vertical sortable list with dynamic height
+
+```markup
+<ul class="list"
+    sortable="items.bind: items;
+      placeholder.bind: { placeholderClass: 'placeholder' }; axis: y">
+  <li class="${item.placeholderClass}"
+      repeat.for="item of items"
+      sortable-item="item.bind: item;"
+      css.bind="item.style">
+    <table>
+      <colgroup width="172px"></colgroup>
+      <colgroup width="48px"></colgroup>
+      <tr>
+        <td>${item.title}</td>
+        <td><span class="glyphicon glyphicon-menu-hamburger"></span></td>
+      </tr>
+    </table>
+  </li>
+</ul>
+```
+    </markdown>
+  </div>
+</template>
