@@ -2,6 +2,7 @@
 var fs = require("fs-extra");
 var path = require("path");
 
+fs.copySync(path.resolve(__dirname, "../package.json"), path.resolve(__dirname, "../deploy/package.json"));
 fs.copySync(path.resolve(__dirname, "../config.js"), path.resolve(__dirname, "../deploy/config.js"));
 fs.copySync(path.resolve(__dirname, "../index.html"), path.resolve(__dirname, "../deploy/index.html"));
 fs.copySync(path.resolve(__dirname, "../dist"), path.resolve(__dirname, "../deploy/dist"));
