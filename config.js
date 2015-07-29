@@ -28,9 +28,8 @@ System.config({
     "commonmark": "npm:commonmark@0.18.2",
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
-    "font-awesome": "npm:font-awesome@4.3.0",
+    "font-awesome": "npm:font-awesome@4.4.0",
     "oribella-aurelia-sortable": "github:oribella/aurelia-sortable@master",
-    "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@master",
     "prism": "github:PrismJS/prism@master",
     "showdown": "github:showdownjs/showdown@1.1.0",
     "github:aurelia/animator-css@0.13.0": {
@@ -48,7 +47,7 @@ System.config({
       "aurelia-history": "github:aurelia/history@0.6.0",
       "aurelia-history-browser": "github:aurelia/history-browser@0.6.1",
       "aurelia-loader-default": "github:aurelia/loader-default@0.9.0",
-      "aurelia-logging-console": "github:aurelia/logging-console@0.6.0",
+      "aurelia-logging-console": "github:aurelia/logging-console@0.6.1",
       "aurelia-router": "github:aurelia/router@0.10.2",
       "aurelia-templating": "github:aurelia/templating@0.13.11",
       "aurelia-templating-binding": "github:aurelia/templating-binding@0.13.1",
@@ -57,18 +56,18 @@ System.config({
       "core-js": "npm:core-js@0.9.18"
     },
     "github:aurelia/dependency-injection@0.9.0": {
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-metadata": "github:aurelia/metadata@0.7.0",
       "core-js": "npm:core-js@0.9.18"
     },
     "github:aurelia/event-aggregator@0.6.1": {
-      "aurelia-logging": "github:aurelia/logging@0.6.1"
+      "aurelia-logging": "github:aurelia/logging@0.6.2"
     },
     "github:aurelia/framework@0.13.3": {
       "aurelia-binding": "github:aurelia/binding@0.8.2",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
       "aurelia-loader": "github:aurelia/loader@0.8.2",
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-metadata": "github:aurelia/metadata@0.7.0",
       "aurelia-path": "github:aurelia/path@0.8.0",
       "aurelia-task-queue": "github:aurelia/task-queue@0.6.0",
@@ -104,20 +103,20 @@ System.config({
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
       "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.6.1",
       "aurelia-history": "github:aurelia/history@0.6.0",
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-path": "github:aurelia/path@0.8.0",
       "aurelia-route-recognizer": "github:aurelia/route-recognizer@0.6.0",
       "core-js": "npm:core-js@0.9.18"
     },
     "github:aurelia/templating-binding@0.13.1": {
       "aurelia-binding": "github:aurelia/binding@0.8.2",
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-templating": "github:aurelia/templating@0.13.11"
     },
     "github:aurelia/templating-resources@0.13.1": {
       "aurelia-binding": "github:aurelia/binding@0.8.2",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-task-queue": "github:aurelia/task-queue@0.6.0",
       "aurelia-templating": "github:aurelia/templating@0.13.11",
       "core-js": "npm:core-js@0.9.18"
@@ -134,7 +133,7 @@ System.config({
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
       "aurelia-html-template-element": "github:aurelia/html-template-element@0.2.0",
       "aurelia-loader": "github:aurelia/loader@0.8.2",
-      "aurelia-logging": "github:aurelia/logging@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.6.2",
       "aurelia-metadata": "github:aurelia/metadata@0.7.0",
       "aurelia-path": "github:aurelia/path@0.8.0",
       "aurelia-task-queue": "github:aurelia/task-queue@0.6.0",
@@ -211,7 +210,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:font-awesome@4.3.0": {
+    "npm:font-awesome@4.4.0": {
       "css": "github:systemjs/plugin-css@0.1.13"
     },
     "npm:inherits@2.0.1": {

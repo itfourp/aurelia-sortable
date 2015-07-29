@@ -22,6 +22,7 @@
     "gh-pages-empty": "bin/empty.js",
     "gh-pages-copy": "bin/copy.js",
     "gh-pages-update-sortable": "bin/update-sortable.js",
+    "symlink-sortable": "bin/symlink-sortable.js",
     "gh-pages-gitignore": "bin/gitignore.js",
     "gh-pages-bundle": "bin/bundle.js",
     "gh-pages-push": "bin/push.js",
@@ -29,7 +30,8 @@
   },
   "scripts": {
     "deploy": "gh-pages-deploy",
-    "empty": "gh-pages-empty"
+    "empty": "gh-pages-empty",
+    "symlink-sortable": "symlink-sortable"
   },
   "devDependencies": {
     "aurelia-cli": "^0.2.1",
