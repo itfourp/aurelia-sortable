@@ -29,6 +29,7 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "oribella-aurelia-sortable": "github:oribella/aurelia-sortable@master",
     "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@master",
     "prism": "github:PrismJS/prism@master",
     "showdown": "github:showdownjs/showdown@1.1.0",
@@ -154,7 +155,7 @@ System.config({
     "github:oribella/aurelia-sortable@master": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
       "aurelia-templating": "github:aurelia/templating@0.13.11",
-      "oribella/default-gestures": "github:oribella/default-gestures@master"
+      "oribella-default-gestures": "github:oribella/default-gestures@master"
     },
     "github:oribella/default-gestures@master": {
       "oribella-doubletap": "github:oribella/doubletap@master",
@@ -225,3 +226,4 @@ System.config({
     }
   }
 });
+

@@ -3,7 +3,7 @@ export function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     .plugin('aurelia-animator-css')
-    .plugin("oribella/aurelia-sortable");
+    .plugin("oribella-aurelia-sortable");
 
   aurelia.start().then(a => a.setRoot());
 }
