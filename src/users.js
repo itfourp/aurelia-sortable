@@ -2,10 +2,10 @@ import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
 import 'fetch';
 
-
 @inject(HttpClient)
-export class ListSortable{
-  items = [];
+export class Users{
+  heading = 'Github Users';
+  users = [];
 
   constructor(http){
     http.configure(config => {
@@ -18,11 +18,8 @@ export class ListSortable{
   }
 
   activate(){
-    return this.http.fetch('users/aurelia/repos')
+    return this.http.fetch('users')
       .then(response => response.json())
-      .then(repos => this.items = repos);
-  }
-
-  moved() {
+      .then(users => this.users = users);
   }
 }

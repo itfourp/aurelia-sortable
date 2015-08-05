@@ -1,5 +1,5 @@
 <template>
-  <require from='./markdown'></require>
+  <require from='markdown'></require>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6">
     <ul class="list" sortable="scroll.bind: '.page-host'; items.bind: items; placeholder.bind: { placeholderClass: 'placeholder' }; axis: y">
       <li repeat.for="item of items"
@@ -10,7 +10,7 @@
           <colgroup width="172px"></colgroup>
           <colgroup width="48px"></colgroup>
           <tr>
-            <td>${item.title}</td>
+            <td>${item.description}</td>
             <td><span class="glyphicon glyphicon-menu-hamburger"></span></td>
           </tr>
         </table>
@@ -33,7 +33,7 @@
       <colgroup width="172px"></colgroup>
       <colgroup width="48px"></colgroup>
       <tr>
-        <td>${item.title}</td>
+        <td>${item.description}</td>
         <td><span class="glyphicon glyphicon-menu-hamburger"></span></td>
       </tr>
     </table>
