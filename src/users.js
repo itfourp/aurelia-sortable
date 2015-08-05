@@ -22,4 +22,8 @@ export class Users{
       .then(response => response.json())
       .then(users => this.users = users);
   }
+
+  moved(args) {
+    console.log(args);
+  }
 }

@@ -1,15 +1,14 @@
 <template>
-  <require from="blur-image"></require>
+  <require from="./blur-image"></require>
   <require from="./markdown"></require>
 
   <div class="au-animate col-md-8 section">
       <h2>${heading}</h2>
       <div class="row au-stagger"
-        sortable="scroll.bind: '.page-host'; items.bind: users; placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
+        sortable="scroll.bind: '.page-host'; items.bind: users; moved.call: moved($event); placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
         <div repeat.for="user of users"
           sortable-item="item.bind: user;"
-          class="col-sm-6 col-md-3 card-container ${user.placeholderClass}"
-          css.bind="item.style">
+          class="col-sm-6 col-md-3 card-container ${user.placeholderClass}">
             <div class="card">
                 <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
                 <div class="avatar">
@@ -31,11 +30,10 @@
 <div class="au-animate col-md-8 section">
     <h2>${heading}</h2>
     <div class="row au-stagger"
-      sortable="scroll.bind: '.page-host'; items.bind: users; placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
+      sortable="scroll.bind: '.page-host'; items.bind: users; moved.call: moved($event); placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
       <div repeat.for="user of users"
         sortable-item="item.bind: user;"
-        class="col-xs-12 col-sm-5 col-md-4 col-lg-3 card-container ${user.placeholderClass}"
-        css.bind="item.style">
+        class="col-xs-12 col-sm-5 col-md-4 col-lg-3 card-container ${user.placeholderClass}">
           <div class="card">
               <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
               <div class="avatar">
