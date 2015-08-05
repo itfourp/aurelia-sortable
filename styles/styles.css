@@ -46,10 +46,6 @@ body {
   }
 }
 
-section {
-    margin: 0 20px;
-}
-
 .navbar-nav li.loader {
     margin: 12px 24px 0 6px;
 }
@@ -59,7 +55,7 @@ section {
 }
 
 /* animate page transitions */
-section.au-enter-active {
+.section.au-enter-active {
   -webkit-animation: fadeInRight 1s;
   animation: fadeInRight 1s;
 }

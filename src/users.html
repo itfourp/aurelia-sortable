@@ -1,10 +1,15 @@
 <template>
   <require from="blur-image"></require>
+  <require from="./markdown"></require>
 
-  <section class="au-animate">
+  <div class="au-animate col-md-8 section">
       <h2>${heading}</h2>
-      <div class="row au-stagger">
-        <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users">
+      <div class="row au-stagger"
+        sortable="scroll.bind: '.page-host'; items.bind: users; placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
+        <div repeat.for="user of users"
+          sortable-item="item.bind: user;"
+          class="col-sm-6 col-md-3 card-container ${user.placeholderClass}"
+          css.bind="item.style">
             <div class="card">
                 <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
                 <div class="avatar">
@@ -17,5 +22,35 @@
             </div>
         </div>
       </div>
-  </section>
+  </div>
+  <div class="col-md-4">
+    <markdown class="markdown">
+### Vertical/horizontal sortable
+
+```markup
+<div class="au-animate col-md-8 section">
+    <h2>${heading}</h2>
+    <div class="row au-stagger"
+      sortable="scroll.bind: '.page-host'; items.bind: users; placeholder.bind: { placeholderClass: 'placeholder' }; drag-z-index.bind: 101">
+      <div repeat.for="user of users"
+        sortable-item="item.bind: user;"
+        class="col-xs-12 col-sm-5 col-md-4 col-lg-3 card-container ${user.placeholderClass}"
+        css.bind="item.style">
+          <div class="card">
+              <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+              <div class="avatar">
+                  <img src.bind="user.avatar_url" crossorigin ref="image"/>
+              </div>
+              <div class="content">
+                  <p class="name">${user.login}</p>
+                  <p><a target="_blank" class="btn btn-default" href.bind="user.html_url">Contact</a></p>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+```
+    </markdown>
+  </div>
+
 </template>
