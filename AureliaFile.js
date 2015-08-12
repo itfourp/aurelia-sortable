@@ -13,7 +13,9 @@ var bundleCfg = {
         'github:aurelia/templating-resources',
         'github:aurelia/templating-router',
         'github:aurelia/loader-default',
-        'github:aurelia/history-browser'
+        'github:aurelia/history-browser',
+        'github:oribella/default-gestures',
+        'github:oribella/aurelia-sortable'
       ],
       options: {
         inject: true
