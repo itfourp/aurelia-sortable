@@ -13,7 +13,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-  buildCSS: false,
 
   map: {
     "aurelia-animator-css": "github:aurelia/animator-css@0.14.1",
