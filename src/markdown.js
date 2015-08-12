@@ -1,6 +1,5 @@
 import {inject, noView, processContent} from 'aurelia-framework';
 import prism from 'prism';
-import 'prism/themes/prism-okaidia.css!';
 import marked from 'chjj/marked';
 
 var extensions = {
