@@ -186,3 +186,19 @@ html, body {
 .placeholder {
   visibility: hidden;
 }
+
+.flickr-img > a > img {
+  width: 260px;
+  height: 180px;
+}
+
+.tiles {
+  margin: 0 auto;
+  width: 420px;
+  height: 420px;
+  line-height: 0px;
+}
+.tile {
+  display: inline-block;
+  border: 1px dotted rgba(0,0,0,0.3);
+}

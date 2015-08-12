@@ -1,4 +1,4 @@
-System.register(['aurelia-framework', 'aurelia-fetch-client', 'fetch'], function (_export) {
+System.register(['aurelia-framework', 'aurelia-http-client'], function (_export) {
   var inject, HttpClient, FlickrSortable;
 
   var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -8,9 +8,9 @@ System.register(['aurelia-framework', 'aurelia-fetch-client', 'fetch'], function
   return {
     setters: [function (_aureliaFramework) {
       inject = _aureliaFramework.inject;
-    }, function (_aureliaFetchClient) {
-      HttpClient = _aureliaFetchClient.HttpClient;
-    }, function (_fetch) {}],
+    }, function (_aureliaHttpClient) {
+      HttpClient = _aureliaHttpClient.HttpClient;
+    }],
     execute: function () {
       'use strict';
 
@@ -20,11 +20,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client', 'fetch'], function
 
           this.heading = 'Flickr';
           this.images = [];
-          this.url = '/services/feeds/photos_public.gne?tags=mountain&tagmode=any&format=json';
-
-          http.configure(function (config) {
-            config.useStandardConfiguration().withBaseUrl('https://api.flickr.com');
-          });
+          this.url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=mountain&tagmode=any&format=json';
 
           this.http = http;
         }
@@ -36,7 +32,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client', 'fetch'], function
           value: function activate() {
             var _this = this;
 
-            return this.http.fetch(this.url).then(function (response) {
+            return this.http.jsonp(this.url).then(function (response) {
               _this.images = response.content.items;
             });
           }
@@ -53,4 +49,4 @@ System.register(['aurelia-framework', 'aurelia-fetch-client', 'fetch'], function
     }
   };
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZsaWNrci1zb3J0YWJsZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzBCQUthLGNBQWM7Ozs7Ozs7O2lDQUxuQixNQUFNOzt1Q0FDTixVQUFVOzs7OztBQUlMLG9CQUFjO0FBS2QsaUJBTEEsY0FBYyxDQUtiLElBQUksRUFBQzs7O2VBSmpCLE9BQU8sR0FBRyxRQUFRO2VBQ2xCLE1BQU0sR0FBRyxFQUFFO2VBQ1gsR0FBRyxHQUFHLHlFQUF5RTs7QUFHN0UsY0FBSSxDQUFDLFNBQVMsQ0FBQyxVQUFBLE1BQU0sRUFBSTtBQUN2QixrQkFBTSxDQUNILHdCQUF3QixFQUFFLENBQzFCLFdBQVcsQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDO1dBQzFDLENBQUMsQ0FBQzs7QUFFSCxjQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztTQUNsQjs7OEJBYlUsY0FBYzs7OztpQkFlakIsb0JBQUU7OztBQUNSLG1CQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FBQyxJQUFJLENBQUMsVUFBQSxRQUFRLEVBQUk7QUFDaEQsb0JBQUssTUFBTSxHQUFHLFFBQVEsQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDO2FBQ3RDLENBQUMsQ0FBQztXQUNKOzs7aUJBRUksaUJBQUcsRUFDUDs7O0FBdEJVLHNCQUFjLEdBRDFCLE1BQU0sQ0FBQyxVQUFVLENBQUMsQ0FDTixjQUFjLEtBQWQsY0FBYztlQUFkLGNBQWM7OztnQ0FBZCxjQUFjIiwiZmlsZSI6ImZsaWNrci1zb3J0YWJsZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7aW5qZWN0fSBmcm9tICdhdXJlbGlhLWZyYW1ld29yayc7XG5pbXBvcnQge0h0dHBDbGllbnR9IGZyb20gJ2F1cmVsaWEtZmV0Y2gtY2xpZW50JztcbmltcG9ydCAnZmV0Y2gnO1xuXG5AaW5qZWN0KEh0dHBDbGllbnQpXG5leHBvcnQgY2xhc3MgRmxpY2tyU29ydGFibGV7XG4gIGhlYWRpbmcgPSAnRmxpY2tyJztcbiAgaW1hZ2VzID0gW107XG4gIHVybCA9ICcvc2VydmljZXMvZmVlZHMvcGhvdG9zX3B1YmxpYy5nbmU/dGFncz1tb3VudGFpbiZ0YWdtb2RlPWFueSZmb3JtYXQ9anNvbic7XG5cbiAgY29uc3RydWN0b3IoaHR0cCl7XG4gICAgaHR0cC5jb25maWd1cmUoY29uZmlnID0+IHtcbiAgICAgIGNvbmZpZ1xuICAgICAgICAudXNlU3RhbmRhcmRDb25maWd1cmF0aW9uKClcbiAgICAgICAgLndpdGhCYXNlVXJsKCdodHRwczovL2FwaS5mbGlja3IuY29tJyk7XG4gICAgfSk7XG5cbiAgICB0aGlzLmh0dHAgPSBodHRwO1xuICB9XG5cbiAgYWN0aXZhdGUoKXtcbiAgICByZXR1cm4gdGhpcy5odHRwLmZldGNoKHRoaXMudXJsKS50aGVuKHJlc3BvbnNlID0+IHtcbiAgICAgIHRoaXMuaW1hZ2VzID0gcmVzcG9uc2UuY29udGVudC5pdGVtcztcbiAgICB9KTtcbiAgfVxuXG4gIG1vdmVkKCkge1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZsaWNrci1zb3J0YWJsZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzBCQUlhLGNBQWM7Ozs7Ozs7O2lDQUpuQixNQUFNOztzQ0FDTixVQUFVOzs7OztBQUdMLG9CQUFjO0FBS2QsaUJBTEEsY0FBYyxDQUtiLElBQUksRUFBQzs7O2VBSmpCLE9BQU8sR0FBRyxRQUFRO2VBQ2xCLE1BQU0sR0FBRyxFQUFFO2VBQ1gsR0FBRyxHQUFHLDhGQUE4Rjs7QUFHbEcsY0FBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7U0FDbEI7OzhCQVBVLGNBQWM7Ozs7aUJBU2pCLG9CQUFFOzs7QUFDUixtQkFBTyxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUFDLFVBQUEsUUFBUSxFQUFJO0FBQ2hELG9CQUFLLE1BQU0sR0FBRyxRQUFRLENBQUMsT0FBTyxDQUFDLEtBQUssQ0FBQzthQUN0QyxDQUFDLENBQUM7V0FDSjs7O2lCQUVJLGlCQUFHLEVBQ1A7OztBQWhCVSxzQkFBYyxHQUQxQixNQUFNLENBQUMsVUFBVSxDQUFDLENBQ04sY0FBYyxLQUFkLGNBQWM7ZUFBZCxjQUFjOzs7Z0NBQWQsY0FBYyIsImZpbGUiOiJmbGlja3Itc29ydGFibGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2luamVjdH0gZnJvbSAnYXVyZWxpYS1mcmFtZXdvcmsnO1xuaW1wb3J0IHtIdHRwQ2xpZW50fSBmcm9tICdhdXJlbGlhLWh0dHAtY2xpZW50JztcblxuQGluamVjdChIdHRwQ2xpZW50KVxuZXhwb3J0IGNsYXNzIEZsaWNrclNvcnRhYmxle1xuICBoZWFkaW5nID0gJ0ZsaWNrcic7XG4gIGltYWdlcyA9IFtdO1xuICB1cmwgPSAnaHR0cDovL2FwaS5mbGlja3IuY29tL3NlcnZpY2VzL2ZlZWRzL3Bob3Rvc19wdWJsaWMuZ25lP3RhZ3M9bW91bnRhaW4mdGFnbW9kZT1hbnkmZm9ybWF0PWpzb24nO1xuXG4gIGNvbnN0cnVjdG9yKGh0dHApe1xuICAgIHRoaXMuaHR0cCA9IGh0dHA7XG4gIH1cblxuICBhY3RpdmF0ZSgpe1xuICAgIHJldHVybiB0aGlzLmh0dHAuanNvbnAodGhpcy51cmwpLnRoZW4ocmVzcG9uc2UgPT4ge1xuICAgICAgdGhpcy5pbWFnZXMgPSByZXNwb25zZS5jb250ZW50Lml0ZW1zO1xuICAgIH0pO1xuICB9XG5cbiAgbW92ZWQoKSB7XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
