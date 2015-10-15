@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 var path = require("path");
-var fs = require("fs-extra");
+var fs = require("fs");
+var rimraf = require("rimraf");
 var p = path.resolve(__dirname, "../jspm_packages/github/oribella");
 
 fs.readdirSync(p).map(function(file) {
@@ -10,5 +11,5 @@ fs.readdirSync(p).map(function(file) {
     file.split(".").length === 3 &&
     file.split("/").pop().indexOf("aurelia-sortable") !== -1;
 }).forEach(function( folder ) {
-  fs.copySync(path.resolve(__dirname, "../../aurelia-sortable/dist/amd"), folder, { clobber: true });
+    rimraf.sync(folder);
 });

@@ -21,8 +21,9 @@
   "bin": {
     "gh-pages-empty": "bin/empty.js",
     "gh-pages-copy": "bin/copy.js",
-    "gh-pages-update-sortable": "bin/update-sortable.js",
+    "update-sortable": "bin/update-sortable.js",
     "symlink-sortable": "bin/symlink-sortable.js",
+    "remove-sortable": "bin/remove-sortable.js",
     "gh-pages-gitignore": "bin/gitignore.js",
     "gh-pages-bundle": "bin/bundle.js",
     "gh-pages-push": "bin/push.js",
@@ -59,6 +60,7 @@
     "karma-jspm": "2.0.1-beta.2",
     "object.assign": "^1.0.3",
     "require-dir": "^0.1.0",
+    "rimraf": "^2.4.2",
     "run-sequence": "^1.0.2",
     "shelljs": "^0.5.1",
     "vinyl-paths": "^1.0.0",
