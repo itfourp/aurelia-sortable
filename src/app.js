@@ -1,5 +1,5 @@
 export class App {
-  configureRouter(config, router){
+  configureRouter(config, router) {
     config.title = 'Aurelia';
     config.map([
       { route: ['', 'flickr'], name: 'flickr', moduleId: 'flickr-sortable', nav: true, title: 'Flickr' },
