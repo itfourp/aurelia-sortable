@@ -1,5 +1,13 @@
 #! /usr/bin/env node
-var shell = require("shelljs");
+var bundler = require('aurelia-bundler');
+var bundles = require('../build/bundles.json');
+var config = {
+  force: true,
+  packagePath: '.',
+  bundles: bundles.bundles
+};
 
+var shell = require("shelljs");
 shell.cd("deploy");
-shell.exec("aurelia bundle --force");
+
+bundler.bundle(config);

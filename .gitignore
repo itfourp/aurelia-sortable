@@ -6,3 +6,4 @@ deploy
 .idea
 .DS_STORE
 build/reports
+coverage
