@@ -19,19 +19,13 @@
     "url": "http://github.com/aurelia/skeleton-navigation"
   },
   "bin": {
-    "gh-pages-empty": "bin/empty.js",
-    "gh-pages-copy": "bin/copy.js",
     "update-sortable": "bin/update-sortable.js",
     "symlink-sortable": "bin/symlink-sortable.js",
     "remove-sortable": "bin/remove-sortable.js",
-    "gh-pages-gitignore": "bin/gitignore.js",
-    "gh-pages-bundle": "bin/bundle.js",
-    "gh-pages-push": "bin/push.js",
-    "gh-pages-deploy": "bin/deploy.js"
+    "gh-pages-push": "bin/push.js"
   },
   "scripts": {
-    "deploy": "gh-pages-deploy",
-    "empty": "gh-pages-empty",
+    "gh-pages-push": "gh-pages-push",
     "symlink-sortable": "symlink-sortable"
   },
   "devDependencies": {
@@ -102,7 +96,7 @@
       "core-js": "npm:core-js@^1.2.6",
       "fetch": "github:github/fetch@^0.10.1",
       "font-awesome": "npm:font-awesome@^4.3.0",
-      "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@^0.3.0",
+      "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@^0.3.1",
       "prism": "github:PrismJS/prism@master",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
