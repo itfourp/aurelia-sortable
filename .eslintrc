@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "parser": "babel-eslint",
   "env": {
       "es6": true,
@@ -12,4 +13,7 @@
   "globals": {
     "expect": true
   }
+=======
+  "extends": "./node_modules/aurelia-tools/.eslintrc"
+>>>>>>> c051b2cb93f2e8d24b4c224af40f56cba6949955
 }

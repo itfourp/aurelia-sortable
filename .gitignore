@@ -7,3 +7,4 @@ deploy
 .DS_STORE
 build/reports
 coverage
+test/e2e/dist

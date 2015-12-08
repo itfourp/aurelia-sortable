@@ -2,6 +2,7 @@
   <require from="./blur-image"></require>
   <require from="./markdown"></require>
 
+<<<<<<< HEAD
   <div class="au-animate col-md-8 section">
       <h2>${heading}</h2>
       <div class="row"
@@ -40,4 +41,23 @@
     </markdown>
   </div>
 
+=======
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">
+      <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users">
+        <div class="card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <div class="avatar">
+            <img src.bind="user.avatar_url" crossorigin ref="image"/>
+          </div>
+          <div class="content">
+            <p class="name">${user.login}</p>
+            <p><a target="_blank" class="btn btn-default" href.bind="user.html_url">Contact</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+>>>>>>> c051b2cb93f2e8d24b4c224af40f56cba6949955
 </template>
