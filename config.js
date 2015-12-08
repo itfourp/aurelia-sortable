@@ -3,8 +3,8 @@ System.config({
   transpiler: "babel",
   babelOptions: {
     "optional": [
-      "es7.decorators",
-      "es7.classProperties"
+      "runtime",
+      "optimisation.modules.system"
     ]
   },
   paths: {
@@ -33,7 +33,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "fetch": "github:github/fetch@0.10.1",
     "font-awesome": "npm:font-awesome@4.4.0",
-    "oribella-aurelia-sortable": "github:oribella/aurelia-sortable@0.3.0",
+    "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@0.3.3",
     "prism": "github:PrismJS/prism@master",
     "text": "github:systemjs/plugin-text@0.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -48,7 +48,7 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "github:oribella/aurelia-sortable@0.3.0": {
+    "github:oribella/aurelia-sortable@0.3.3": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1",

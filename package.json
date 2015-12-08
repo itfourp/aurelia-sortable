@@ -29,7 +29,7 @@
     "symlink-sortable": "symlink-sortable"
   },
   "devDependencies": {
-    "aurelia-bundler": "^0.1.8",
+    "aurelia-bundler": "^0.1.9",
     "aurelia-tools": "^0.1.3",
     "babel": "^5.8.23",
     "babel-eslint": "^4.1.3",
@@ -83,7 +83,7 @@
       "chjj/marked": "github:chjj/marked@0.3.3",
       "fetch": "github:github/fetch@^0.10.1",
       "font-awesome": "npm:font-awesome@^4.4.0",
-      "oribella-aurelia-sortable": "github:oribella/aurelia-sortable@^0.3.0",
+      "oribella/aurelia-sortable": "github:oribella/aurelia-sortable@^0.3.0",
       "prism": "github:PrismJS/prism@master",
       "text": "github:systemjs/plugin-text@^0.0.3"
     },

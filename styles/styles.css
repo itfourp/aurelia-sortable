@@ -185,7 +185,7 @@ html, body {
 }
 
 .placeholder {
-  visibility: hidden;
+  opacity: 0.3;
 }
 
 .flickr-img > a > img {

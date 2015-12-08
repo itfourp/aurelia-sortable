@@ -11,10 +11,9 @@
         "minify": true
       }
     },
-    "dist/oribella-aurelia-sortable": {
+    "dist/fubar": {
       "includes": [
-        "github:oribella/aurelia-sortable@0.3.1",
-        "github:oribella/aurelia-sortable@0.3.1/*"
+        "oribella/aurelia-sortable@0.3.3/index"
       ],
       "options": {
         "inject": true,
