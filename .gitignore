@@ -1,7 +1,0 @@
-node_modules
-jspm_packages
-bower_components
-.DS_STORE
-coverage
-demo/dist
-demo/deploy
