@@ -1,13 +1,13 @@
 {
-  "name": "oribella-aurelia-sortable",
-  "version": "0.7.0",
+  "name": "aozisik-aurelia-sortable",
+  "version": "0.7.1",
   "description": "",
   "license": "MIT",
   "author": "Christoffer Åström",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oribella/aurelia-sortable"
+    "url": "https://github.com/aozisik/aurelia-sortable"
   },
   "scripts": {
     "version": "dev-changelog && git add CHANGELOG.md",
@@ -23,7 +23,7 @@
     "demo:deploy": "git subtree split --prefix demo/dist -b gh-pages && git push origin gh-pages:gh-pages"
   },
   "jspm": {
-    "registry": "npm",
+    "registry": "npm",    
     "jspmPackage": true,
     "main": "index",
     "format": "amd",
@@ -31,17 +31,17 @@
       "lib": "dist/amd"
     },
     "peerDependencies": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.1.4",
-      "aurelia-pal": "npm:aurelia-pal@^1.0.0-beta.1.1.1",
-      "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1.1.4",
-      "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.1.2",
+      "aurelia-dependency-injection": "^1.0.0-beta.1.1.4",
+      "aurelia-pal": "^1.0.0-beta.1.1.1",
+      "aurelia-pal-browser": "^1.0.0-beta.1.1.4",
+      "aurelia-templating": "^1.0.0-beta.1.1.2",
       "oribella-default-gestures": "^0.5.2"
     },
     "dependencies": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.1.4",
-      "aurelia-pal": "npm:aurelia-pal@^1.0.0-beta.1.1.1",
-      "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1.1.4",
-      "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.1.2",
+      "aurelia-dependency-injection": "^1.0.0-beta.1.1.4",
+      "aurelia-pal": "^1.0.0-beta.1.1.1",
+      "aurelia-pal-browser": "^1.0.0-beta.1.1.4",
+      "aurelia-templating": "^1.0.0-beta.1.1.2",
       "oribella-default-gestures": "^0.5.2"
     }
   },
