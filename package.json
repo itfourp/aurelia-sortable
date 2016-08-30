@@ -1,5 +1,5 @@
 {
-  "name": "aozisik-aurelia-sortable",
+  "name": "itfourp-aurelia-sortable",
   "version": "0.7.1",
   "description": "",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aozisik/aurelia-sortable"
+    "url": "https://github.com/itfourp-aurelia-sortable"
   },
   "scripts": {
     "version": "dev-changelog && git add CHANGELOG.md",

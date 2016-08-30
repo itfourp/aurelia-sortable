@@ -245,6 +245,7 @@ var Sortable = exports.Sortable = (_dec = (0, _aureliaTemplating.customAttribute
   Sortable.prototype.move = function move(fromIx, toIx) {
     if (fromIx !== -1 && toIx !== -1 && fromIx !== toIx) {
       this.items.splice(toIx, 0, this.items.splice(fromIx, 1)[0]);
+      this.toIx = toIx;
     }
   };
 
@@ -402,7 +403,7 @@ var Sortable = exports.Sortable = (_dec = (0, _aureliaTemplating.customAttribute
     }
     this.stop();
     if (this.fromIx !== this.toIx) {
-      this.moved({ fromIx: this.fromIx, toIx: this.toIx });
+      this.moved({ fromIx: this.fromIx, toIx: this.toIx, items: this.items });
     }
   };
 

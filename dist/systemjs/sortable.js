@@ -1,6 +1,8 @@
 "use strict";
 
 System.register(["aurelia-pal", "aurelia-templating", "aurelia-dependency-injection", "oribella-default-gestures", "./drag", "./auto-scroll"], function (_export, _context) {
+  "use strict";
+
   var DOM, customAttribute, bindable, inject, transient, oribella, matchesSelector, STRATEGY_FLAG, Drag, AutoScroll, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _dec4, _class4, _desc2, _value2, _class5, _descriptor13, SORTABLE_ITEM, Sortable, SortableItem;
 
   function _initDefineProp(target, property, descriptor, context) {
@@ -252,6 +254,7 @@ System.register(["aurelia-pal", "aurelia-templating", "aurelia-dependency-inject
         Sortable.prototype.move = function move(fromIx, toIx) {
           if (fromIx !== -1 && toIx !== -1 && fromIx !== toIx) {
             this.items.splice(toIx, 0, this.items.splice(fromIx, 1)[0]);
+            this.toIx = toIx;
           }
         };
 
@@ -409,7 +412,7 @@ System.register(["aurelia-pal", "aurelia-templating", "aurelia-dependency-inject
           }
           this.stop();
           if (this.fromIx !== this.toIx) {
-            this.moved({ fromIx: this.fromIx, toIx: this.toIx });
+            this.moved({ fromIx: this.fromIx, toIx: this.toIx, items: this.items });
           }
         };
 

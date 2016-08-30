@@ -238,6 +238,7 @@ define(["exports", "aurelia-pal", "aurelia-templating", "aurelia-dependency-inje
     Sortable.prototype.move = function move(fromIx, toIx) {
       if (fromIx !== -1 && toIx !== -1 && fromIx !== toIx) {
         this.items.splice(toIx, 0, this.items.splice(fromIx, 1)[0]);
+        this.toIx = toIx;
       }
     };
 
@@ -395,7 +396,7 @@ define(["exports", "aurelia-pal", "aurelia-templating", "aurelia-dependency-inje
       }
       this.stop();
       if (this.fromIx !== this.toIx) {
-        this.moved({ fromIx: this.fromIx, toIx: this.toIx });
+        this.moved({ fromIx: this.fromIx, toIx: this.toIx, items: this.items });
       }
     };
 
