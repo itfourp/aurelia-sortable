@@ -158,6 +158,16 @@ export class Sortable {
     this.boundaryRect = utils.getBoundaryRect(this.rootSortableRect, window);
     this.lastElementFromPointRect = element.getBoundingClientRect();
   }
+  private tryChangeTargetRepeatCaching(target: Node, enableCache: boolean, force: boolean = true) {
+    let fromVM = utils.getViewModel(target as SortableItemElement);
+    let repeat = fromVM ? fromVM.repeat : null;
+    if (repeat && repeat.viewFactory) {
+      if(enableCache && !repeat.viewFactory.isCaching)
+		repeat.viewFactory.setCacheSize('*', !force);
+      else if (!enableCache && repeat.viewFactory.isCaching)
+	    repeat.viewFactory.setCacheSize('', !force);
+    }
+  }
   public down({ evt, data: { pointers: [{ client }] }, target }: DefaultListenerArgs) {
     this.move = DefaultInvalidMove;
     if (!this.isClosestSortable(evt.target as Node)) {
@@ -174,6 +184,7 @@ export class Sortable {
     return RETURN_FLAG.REMOVE;
   }
   public start({ data: { pointers: [{ client }] }, target }: DefaultListenerArgs) {
+    this.tryChangeTargetRepeatCaching(target, true);
     utils.addDragClone(this.dragClone, this.element as HTMLElement, this.scroll as Element, target as HTMLElement, this.downClientPoint, this.dragZIndex, this.dragClass, window);
     this.target.classList.add(this.sortingClass);
     this.tryScroll(client);
@@ -187,6 +198,7 @@ export class Sortable {
   public stop() {
     if (this.target) {
       this.target.classList.remove(this.sortingClass);
+      this.tryChangeTargetRepeatCaching(this.target, false);
     }
     utils.removeDragClone(this.dragClone);
     this.autoScroll.deactivate();
@@ -204,10 +216,7 @@ export class SortableItem {
   public parentSortable: Sortable | null;
   public childSortable: Sortable | null;
 
-  constructor(public element: Element, repeat: Repeat) {
-    if (!repeat.viewFactory.isCaching) {
-      repeat.viewFactory.setCacheSize('*', true);
-    }
+  constructor(public element: Element, public repeat: Repeat) {
   }
   private getParentSortable(): Sortable | null {
     const parent = utils.closest((this.element as Node).parentNode, SORTABLE_ATTR, window.document);
